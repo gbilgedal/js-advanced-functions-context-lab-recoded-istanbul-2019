@@ -19,7 +19,7 @@ function createEmployeeRecords(employees){
   return emplo;
 }
 
-function createTimeInEvent(employee, dateInfo){
+function createTimeInEvent(dateInfo){
   let date = dateInfo.split(" ");
   let time = date[1];
   let hour = parseInt(time)%100;
@@ -30,9 +30,9 @@ function createTimeInEvent(employee, dateInfo){
     date: date[0],
   };
 
-  employee.timeInEvents.push(recordObject);
+  this.timeInEvents.push(recordObject);
 
-  return employee;
+  return this;
 }
 
 function createTimeOutEvent(dateInfo){
