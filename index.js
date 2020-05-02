@@ -16,8 +16,6 @@ function createEmployees(emmployees) {
   return emplo;
 }
 
-
-
 function createEmployeeRecords(employees){
   let emplo = [];
   for(let i = 0;i<employees.length;i++){
