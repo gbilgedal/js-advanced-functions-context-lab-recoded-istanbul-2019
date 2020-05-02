@@ -35,7 +35,7 @@ function createTimeInEvent(employee, dateInfo){
   return employee;
 }
 
-function createTimeOutEvent(employee, dateInfo){
+function createTimeOutEvent(dateInfo){
   let date = dateInfo.split(" ");
   let time = date[1];
   let hour = parseInt(time)%100;
@@ -46,9 +46,9 @@ function createTimeOutEvent(employee, dateInfo){
     date: date[0],
   };
 
-  employee.timeOutEvents.push(recordObject);
+  this.timeOutEvents.push(recordObject);
 
-  return employee;
+  return this;
 }
 
 function hoursWorkedOnDate(date){
