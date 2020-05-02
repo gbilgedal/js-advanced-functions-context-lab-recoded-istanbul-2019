@@ -58,7 +58,7 @@ function hoursWorkedOnDate(date){
 
 }
 function wagesEarnedOnDate(date) {
-  let hours = this.hoursWorkedOnDate(date);
+  let hours = hoursWorkedOnDate.call(this,date);
   return hours * this.payPerHour;
 }
 function findEmployeeByFirstName(srcArray, firstName){
