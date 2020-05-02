@@ -8,12 +8,10 @@ function createEmployeeRecord([firstName, familyName, title, payPerHour]) {
         , timeOutEvents: []
     }
 }
-function createEmployees(emmployees) {
-  let emplo = [];
-  for(let i = 0;i<employees.length;i++){
-    emplo.push(createEmployeeRecord(employees[i]));
-  }
-  return emplo;
+function createEmployees(employees) {
+    return employees.map(employee => {
+        return createEmployeeRecord(employee)
+    })
 }
 
 function createEmployeeRecords(employees){
