@@ -38,8 +38,6 @@ function createTimeInEvent(dateInfo){
 function createTimeOutEvent(dateInfo){
   let date = dateInfo.split(" ");
   let time = date[1];
-  let hour = parseInt(time)%100;
-  let minutes = parseInt(time)-hour;
   let recordObject = {
     type: "TimeOut",
     hour: parseInt(time),
